@@ -4,7 +4,7 @@ import Head from "next/head";
 import { useState } from "react";
 import Link from "next/link";
 import Footer from "./components/Footer";
-import { doLogin } from "./services/Web3Service";
+import { doLogin } from "../services/Web3Service";
 
 export default function Home() {
 
