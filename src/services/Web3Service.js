@@ -1,7 +1,7 @@
 import Web3 from 'web3';
 import ABI from './ABI.json';
 
-const CONTRACT_ADDRESS = '0x28634D55a0C22b1b93B25C96C8ae71670a630ce6';
+const CONTRACT_ADDRESS = '0x28634D55a0C22b1b93B25C96C8ae71670a630ce6'; // SEPOLIA TESTNET
 
 export async function doLogin(){
     if(!window.ethereum) throw new Error('Metamask not found');
