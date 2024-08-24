@@ -18,7 +18,8 @@ export default function Create() {
     function btnSaveClick(){
         setMessage("Aguarde...");
         addCampaign(campaign)
-            .then(tx => setMessage(JSON.stringify(tx)))
+            .then(tx => getLastCampaignId())
+            .then(id => setMessage(`Campanha criada com sucesso. ID: ${id}`))
             .catch(err => setMessage(err.message));
     }
 

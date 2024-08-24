@@ -23,7 +23,17 @@ function getContract(){
     return new web3.eth.Contract(ABI, CONTRACT_ADDRESS, {from});
 }
 
-export async function addCampaign(campaign){
+export function addCampaign(campaign){
     const contract = getContract();
     return contract.methods.addCampaign(campaign.title, campaign.description, campaign.videoUrl, campaign.imageUrl).send();
+}
+
+export function getCampaigns(){
+    const contract = getContract();
+    return contract.methods.nextId().call();
+}
+
+export function getCampaign(id){
+    const contract = getContract();
+    return contract.methods.campaigns(id).call();
 }
